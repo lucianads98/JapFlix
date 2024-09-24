@@ -5,11 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Japflix</title>
-
+   
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
-  
+
+  <style>
+    #detallePelicula {
+        border: 1px solid #ccc; /* Opcional: un borde para el contenedor */
+        padding: 15px; /* Espaciado interno */
+        border-radius: 8px; /* Esquinas redondeadas */
+    }
+    .btn-secondary {
+        margin-left: 10px; /* Espacio a la izquierda del botón */
+    }
+</style>
 </head>
 
 <body class="bg-dark">
@@ -28,7 +38,25 @@
       <ul class="list-group container" id="lista">
       </ul>
     </div>
+
+    <div id="detallePelicula" class="container text-light" style="display: none;">
+      <div class="d-flex justify-content-between align-items-center">
+          <h2 id="tituloPelicula" class="mb-0"></h2>
+          <button id="btnDetalles" class="btn btn-secondary">Mostrar Detalles</button>
+      </div>
+      <p id="overviewPelicula"></p>
+      <p id="generosPelicula"></p>
+      <div id="infoAdicional" class="mt-2" style="display: none;">
+          <p><strong>Año de lanzamiento:</strong> <span id="anioLanzamiento"></span></p>
+          <p><strong>Duración:</strong> <span id="duracion"></span> minutos</p>
+          <p><strong>Presupuesto:</strong> <span id="presupuesto"></span></p>
+          <p><strong>Ganancias:</strong> <span id="ganancias"></span></p>
+      </div>
+  </div>
+
   </main>
+
+ 
 
   <footer class="text-muted py-3">
     <div class="container">
@@ -42,6 +70,7 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
